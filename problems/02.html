@@ -11,7 +11,22 @@
                 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
                 By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
             </aside>
+            
+            <pre>
+var array = [0, 1],
+    i,
+    result = 0;
+for (i = 2; i <= 100; i += 1) {
+    array[i] = (array[i - 1] + array[i - 2]);
+    if (array[i] < 4000000 && array[i] % 2 == 0) {
+        result += array[i];
+    }
+}
+document.getElementById('answer').innerHTML = result;
+            </pre>
+            
             <div>Answer: <span id="answer"></span></div>
+            
             <script>
                 var array = [0, 1],
                     i,

@@ -11,17 +11,39 @@
 
                 What is the largest prime factor of the number 600851475143 ?
             </aside>
+            
+            <pre>
+var number = 600851475143,
+    check = 2,
+    array = [];
+while (check * check <= number) {
+    if (number % check == 0) {
+        array.push(check);
+        number = number / check;
+    } else {
+        check += 1;
+    }
+}
+if (number != 1) {
+    array.push(number);
+}
+// array is now full list of prime number factors
+
+document.getElementById('answer').innerHTML = array[array.length - 1];
+            </pre>
+            
             <div>Answer: <span id="answer"></span></div>
+            
             <script>
                 var number = 600851475143,
-                    checker = 2,
+                    check = 2,
                     array = [];
-                while (checker * checker <= number) {
-                    if (number % checker == 0) {
-                        array.push(checker);
-                        number = number / checker;
+                while (check * check <= number) {
+                    if (number % check == 0) {
+                        array.push(check);
+                        number = number / check;
                     } else {
-                        checker += 1;
+                        check += 1;
                     }
                 }
                 if (number != 1) {
