@@ -13,13 +13,53 @@ What is the 10 001st prime number?
             </aside>
             
             <pre>
+var result = 0,
+    array = [0, 2, 3, 5, 7],
+    i = 7,
+    isPrime = function (n) {
+        var p,
+            half = n / 2;
+        for (p = 2; p < half; p += 1) {
+            if (n % p == 0) {
+                return false;
+            }
+        }
+        return true;
+    };
+
+while (array.length <= 10002) {
+    if (isPrime(i)) {
+        array.push(i);
+    }
+    i += 2;
+}
+result = array[array.length - 1];
             </pre>
             
             <div>Answer: <span id="answer"></span></div>
             
             <script>
-                var result = 0;
+                var result = 0,
+                    array = [0, 2, 3, 5, 7],
+                    i = 7,
+                    isPrime = function (n) {
+                        var p,
+                            half = n / 2;
+                        for (p = 2; p < half; p += 1) {
+                            if (n % p == 0) {
+                                return false;
+                            }
+                        }
+                        return true;
+                    };
                 
+                while (array.length <= 10002) {
+                    if (isPrime(i)) {
+                        array.push(i);
+                    }
+                    i += 2;
+                }
+                result = array[array.length - 1];
                 
                 document.getElementById('answer').innerHTML = result;
                 console.log(result);
