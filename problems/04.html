@@ -13,11 +13,41 @@
             </aside>
             
             <pre>
+var one = 999,
+    two = 999,
+    result = 0,
+    o,
+    t;
+    reverseMatch = function (number) {
+        return (number === parseFloat(('' + number).split('').reverse().join(''))) ? true : false;
+    };                    
+for (o = one; o > 100; o -= 1) {
+    for (t = two; t > 100; t -= 1) {
+        if (reverseMatch(o * t)) {
+            ((o * t) > result) ? result = o * t : result = result;
+        }
+    }
+}
             </pre>
             
             <div>Answer: <span id="answer"></span></div>
             
             <script>
+                var one = 999,
+                    two = 999,
+                    result = 0,
+                    o,
+                    t;
+                    reverseMatch = function (number) {
+                        return (number === parseFloat(('' + number).split('').reverse().join(''))) ? true : false;
+                    };                    
+                for (o = one; o > 100; o -= 1) {
+                    for (t = two; t > 100; t -= 1) {
+                        if (reverseMatch(o * t)) {
+                            ((o * t) > result) ? result = o * t : result = result;
+                        }
+                    }
+                }
                 
                 document.getElementById('answer').innerHTML = result;
                 console.log(result);
