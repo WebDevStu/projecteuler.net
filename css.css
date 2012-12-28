@@ -15,6 +15,7 @@ aside{
     text-shadow: 1px 1px 0 #fff;
     border-radius: 10px;
     background: #d8d8d8;
+    white-space: pre-wrap
 }
 div{
     padding: 10px;
