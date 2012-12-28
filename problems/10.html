@@ -13,28 +13,44 @@ Find the sum of all the primes below two million.
             </aside>
             
             <pre>
+var result = 2,
+    max = 2000000,
+    i, sr, prime, p;
+for (i = 3; i <= max; i += 2) {
+    sr = Math.sqrt(i);
+    prime = true;
+    for (p = 3; prime && (p <= sr); p += 2) {
+        if (i % p == 0) {
+            prime = false;
+        } else {
+            prime = true;
+        }
+    }
+    if (prime){
+        result += i;
+    }
+}
             </pre>
             
             <div>Answer: <span id="answer"></span></div>
             
             <script>
                 var result = 2,
-                    max = 10,
-                    i = 3,
-                    isPrime = function (n) {
-                        var p = 3,
-                            sr = n / 2;
-                        while (p < sr) {
-                            if (n % p == 0) {
-                                return false;
-                            }
-                            p += 1;
-                        }
-                        console.log(n);
-                        return true;
-                    };
+                    max = 2000000,
+                    i, sr, prime, p;
                 for (i = 3; i <= max; i += 2) {
-                    (isPrime(i)) ? result += i : result = result;
+                    sr = Math.sqrt(i);
+                    prime = true;
+                    for (p = 3; prime && (p <= sr); p += 2) {
+                        if (i % p == 0) {
+                            prime = false;
+                        } else {
+                            prime = true;
+                        }
+                    }
+                    if (prime){
+                        result += i;
+                    }
                 }
                 
                 document.getElementById('answer').innerHTML = result;
