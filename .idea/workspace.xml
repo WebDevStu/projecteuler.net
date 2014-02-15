@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85f4f95-a44a-4af8-9014-6a53c8bbc833" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/problems/14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/problems/13.html" afterPath="$PROJECT_DIR$/problems/13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="projecteuler.net.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,6 +136,7 @@
     <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
