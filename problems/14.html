@@ -24,7 +24,36 @@
             </aside>
             
             <pre>
+var result = 0,
+    longest = 0,
+    number = 1000000,
+    counter = 1,
+    res,
+    sums = [];
 
+while (number > 500000) {
+    res = number;
+    sums.length = 0;
+    sums.push(number);
+
+    while (res > 1) {
+        if (res % 2 === 0) {
+            res = res / 2;
+        } else {
+            res = (res * 3) + 1;
+        }
+
+        sums.push(res);
+        counter += 1;
+    }
+
+    if (sums.length > longest) {
+        result = number;
+        longest = sums.length;
+    }
+    counter = 1;
+    number -= 1;
+}
             </pre>
 
             <div>Answer: <span id="answer"></span></div>
@@ -33,18 +62,16 @@
                 var result = 0,
                     longest = 0,
                     number = 1000000,
-                    i,
                     counter = 1,
                     res,
                     sums = [];
 
-                while (number > 0) {
+                while (number > 500000) {
                     res = number;
                     sums.length = 0;
                     sums.push(number);
 
                     while (res > 1) {
-
                         if (res % 2 === 0) {
                             res = res / 2;
                         } else {
@@ -60,10 +87,8 @@
                         longest = sums.length;
                     }
                     counter = 1;
-                    number -= 2;
+                    number -= 1;
                 }
-                console.log(longest);
-
 
                 document.getElementById('answer').innerHTML = result;
                 console.log(result);
